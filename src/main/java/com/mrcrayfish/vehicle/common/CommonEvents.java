@@ -44,8 +44,11 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 /**
@@ -127,9 +130,6 @@ public class CommonEvents
 
     public static boolean handleVehicleInteraction(World world, PlayerEntity player, Hand hand, Entity entity)
     {
-        if(!Config.SERVER.pickUpVehicles.get())
-            return false;
-
         if(hand != Hand.MAIN_HAND)
             return false;
 
@@ -156,6 +156,17 @@ public class CommonEvents
     {
         if(!vehicle.canPlayerCarry())
             return false;
+
+        try {
+            Class<?> forgeApi = Class.forName("com.craftlyworks.irontime.api.util.ForgeAPI");
+            Method hasPermission = forgeApi.getMethod("hasPermission", UUID.class, String.class);
+            Object invoke = hasPermission.invoke(null, player.getUUID(), "vehicle.pickup");
+            Boolean b = (Boolean) invoke;
+            if (!b) return false;
+
+        } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
         // Removes the trailer before saving vehicle
         vehicle.setTrailer(null);
