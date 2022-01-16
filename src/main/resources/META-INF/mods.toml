@@ -5,7 +5,7 @@ issueTrackerURL="https://github.com/MrCrayfish/MrCrayfishVehicleMod/issues"
 
 [[mods]]
 modId="vehicle"
-version="0.45.2"
+version="0.45.3"
 displayName="MrCrayfish's Vehicle Mod"
 updateJSONURL="https://mrcrayfish.com/modupdatejson?id=vehicle"
 displayURL="https://mrcrayfish.com/mods?id=vehicle"
