@@ -40,6 +40,7 @@ public enum SpecialModels implements ISpecialModel
     SPORTS_PLANE_PROPELLER("sports_plane_propeller"),
     GOLF_CART_BODY("golf_cart_body"),
     OFF_ROADER_BODY("off_roader_body"),
+    POLICE_CAR_BODY("police_body"),
     TRACTOR("tractor_body"),
     MINI_BUS_BODY("mini_bus_body"),
     DIRT_BIKE_BODY("dirt_bike_body"),

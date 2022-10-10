@@ -143,6 +143,7 @@ public class ClientHandler
         registerVehicleRenderer(ModEntities.SPORTS_PLANE.get(), SportsPlaneRenderer::new);
         registerVehicleRenderer(ModEntities.GOLF_CART.get(), GolfCartRenderer::new);
         registerVehicleRenderer(ModEntities.OFF_ROADER.get(), OffRoaderRenderer::new);
+        registerVehicleRenderer(ModEntities.POLICE_CAR.get(), PoliceCarRenderer::new);
         registerVehicleRenderer(ModEntities.TRACTOR.get(), TractorRenderer::new);
         registerVehicleRenderer(ModEntities.MINI_BUS.get(), MiniBusRenderer::new);
         registerVehicleRenderer(ModEntities.DIRT_BIKE.get(), DirtBikeRenderer::new);

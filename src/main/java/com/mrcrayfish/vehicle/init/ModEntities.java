@@ -41,6 +41,7 @@ public class ModEntities
     public static final RegistryObject<EntityType<SportsPlaneEntity>> SPORTS_PLANE = VehicleUtil.createEntityType(REGISTER, "sports_plane", SportsPlaneEntity::new, 3.0F, 1.6875F);
     public static final RegistryObject<EntityType<GolfCartEntity>> GOLF_CART = VehicleUtil.createEntityType(REGISTER, "golf_cart", GolfCartEntity::new, 2.0F, 1.0F);
     public static final RegistryObject<EntityType<OffRoaderEntity>> OFF_ROADER = VehicleUtil.createEntityType(REGISTER, "off_roader", OffRoaderEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<PoliceCarEntity>> POLICE_CAR = VehicleUtil.createEntityType(REGISTER, "police_car", PoliceCarEntity::new, 2.0F, 1.0F);
     public static final RegistryObject<EntityType<TractorEntity>> TRACTOR = VehicleUtil.createEntityType(REGISTER, "tractor", TractorEntity::new, 1.5F, 1.5F);
     public static final RegistryObject<EntityType<MiniBusEntity>> MINI_BUS = VehicleUtil.createEntityType(REGISTER, "mini_bus", MiniBusEntity::new, 2.0F, 2.0F);
     public static final RegistryObject<EntityType<DirtBikeEntity>> DIRT_BIKE = VehicleUtil.createEntityType(REGISTER, "dirt_bike", DirtBikeEntity::new, 1.0F, 1.5F);
