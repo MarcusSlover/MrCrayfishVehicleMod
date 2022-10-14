@@ -40,11 +40,7 @@ public class HeldVehicleHandler
 
     private void patchPlayerRender(PlayerRenderer player)
     {
-        List<LayerRenderer<AbstractClientPlayerEntity, PlayerModel<AbstractClientPlayerEntity>>> layers = ObfuscationReflectionHelper.getPrivateValue(LivingRenderer.class, player, "layers");
-        if(layers != null)
-        {
-            layers.add(new LayerHeldVehicle(player));
-        }
+        player.addLayer(new LayerHeldVehicle(player));
     }
 
     public static final Map<UUID, AnimationCounter> idToCounter = new HashMap<>();

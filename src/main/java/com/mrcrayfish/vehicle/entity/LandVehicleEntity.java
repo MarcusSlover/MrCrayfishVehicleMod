@@ -28,13 +28,9 @@ public abstract class LandVehicleEntity extends PoweredVehicleEntity
     public float additionalYaw;
     public float prevAdditionalYaw;
 
-    @OnlyIn(Dist.CLIENT)
     public float frontWheelRotation;
-    @OnlyIn(Dist.CLIENT)
     public float prevFrontWheelRotation;
-    @OnlyIn(Dist.CLIENT)
     public float rearWheelRotation;
-    @OnlyIn(Dist.CLIENT)
     public float prevRearWheelRotation;
 
     public LandVehicleEntity(EntityType<?> entityType, World worldIn)
