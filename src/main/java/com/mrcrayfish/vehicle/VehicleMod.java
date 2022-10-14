@@ -82,7 +82,7 @@ public class VehicleMod
     {
         DataGenerator generator = event.getGenerator();
         generator.addProvider(new LootTableGen(generator));
-        generator.addProvider(new RecipeGen(generator));
+        //generator.addProvider(new RecipeGen(generator));
         generator.addProvider(new VehiclePropertiesGen(generator));
     }
 }

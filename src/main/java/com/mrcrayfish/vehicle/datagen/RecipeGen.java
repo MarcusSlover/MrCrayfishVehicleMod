@@ -334,7 +334,7 @@ public class RecipeGen extends RecipeProvider
                 .unlockedBy("has_white_concrete", has(Items.WHITE_CONCRETE))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(ModBlocks.WORKSTATION.get())
+        /*ShapedRecipeBuilder.shaped(ModBlocks.WORKSTATION.get())
                 .pattern("III")
                 .pattern("GCG")
                 .pattern("GGG")
@@ -344,7 +344,7 @@ public class RecipeGen extends RecipeProvider
                 .unlockedBy("has_iron_ingot", has(Tags.Items.INGOTS_IRON))
                 .unlockedBy("has_gold_ingot", has(Tags.Items.INGOTS_GOLD))
                 .unlockedBy("has_crafting_table", has(Items.CRAFTING_TABLE))
-                .save(consumer);
+                .save(consumer);*/
 
         ShapedRecipeBuilder.shaped(ModItems.SPRAY_CAN.get())
                 .pattern("IDI")
@@ -392,7 +392,7 @@ public class RecipeGen extends RecipeProvider
 
         // Furniture
         //workstationCrafting(consumer, new ResourceLocation("cfm:bath"), WorkstationIngredient.of(Tags.Items.INGOTS_IRON, 80), WorkstationIngredient.of(ModItems.PANEL.get(), 10));
-        dependantWorkstationCrafting(consumer, "cfm", new ResourceLocation("vehicle:sofa"), WorkstationIngredient.of(new ResourceLocation("cfm:rainbow_sofa"), 1), WorkstationIngredient.of(Tags.Items.INGOTS_IRON, 8));
+        //dependantWorkstationCrafting(consumer, "cfm", new ResourceLocation("vehicle:sofa"), WorkstationIngredient.of(new ResourceLocation("cfm:rainbow_sofa"), 1), WorkstationIngredient.of(Tags.Items.INGOTS_IRON, 8));
         //workstationCrafting(consumer, new ResourceLocation("cfm:sofacopter"), WorkstationIngredient.of(Tags.Items.INGOTS_IRON, 80), WorkstationIngredient.of(ModItems.PANEL.get(), 10));
 
         fluidExtracting(consumer, Items.BLAZE_ROD, FluidEntry.of(ModFluids.BLAZE_JUICE.get(), 450));

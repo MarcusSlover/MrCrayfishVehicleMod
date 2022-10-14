@@ -25,7 +25,7 @@ public class ModTileEntities
     public static final RegistryObject<TileEntityType<IndustrialFuelDrumTileEntity>> INDUSTRIAL_FUEL_DRUM = register("industrial_fuel_drum", IndustrialFuelDrumTileEntity::new, () -> new Block[]{ModBlocks.INDUSTRIAL_FUEL_DRUM.get()});
     public static final RegistryObject<TileEntityType<FluidMixerTileEntity>> FLUID_MIXER = register("fluid_mixer", FluidMixerTileEntity::new, () -> new Block[]{ModBlocks.FLUID_MIXER.get()});
     public static final RegistryObject<TileEntityType<VehicleCrateTileEntity>> VEHICLE_CRATE = register("vehicle_crate", VehicleCrateTileEntity::new, () -> new Block[]{ModBlocks.VEHICLE_CRATE.get()});
-    public static final RegistryObject<TileEntityType<WorkstationTileEntity>> WORKSTATION = register("workstation", WorkstationTileEntity::new, () -> new Block[]{ModBlocks.WORKSTATION.get()});
+   // public static final RegistryObject<TileEntityType<WorkstationTileEntity>> WORKSTATION = register("workstation", WorkstationTileEntity::new, () -> new Block[]{ModBlocks.WORKSTATION.get()});
     public static final RegistryObject<TileEntityType<JackTileEntity>> JACK = register("jack", JackTileEntity::new, () -> new Block[]{ModBlocks.JACK.get()});
     public static final RegistryObject<TileEntityType<BoostTileEntity>> BOOST = register("boost", BoostTileEntity::new, () -> new Block[]{});
     public static final RegistryObject<TileEntityType<GasPumpTileEntity>> GAS_PUMP = register("gas_pump", GasPumpTileEntity::new, () -> new Block[]{ModBlocks.GAS_PUMP.get()});
