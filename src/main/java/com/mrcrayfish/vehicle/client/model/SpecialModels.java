@@ -40,7 +40,23 @@ public enum SpecialModels implements ISpecialModel
     SPORTS_PLANE_PROPELLER("sports_plane_propeller"),
     GOLF_CART_BODY("golf_cart_body"),
     OFF_ROADER_BODY("off_roader_body"),
-    POLICE_CAR_BODY("police_body"),
+
+    POLICE_CAR_BODY("police_body", true),
+    POLICE_TRANSPORT_CAR_BODY("police_transport_body", true),
+    POLICE_INVESTIGATION_CAR_BODY("police_investigation_body", true),
+
+    PIZZA_BREW_CAR_BODY("pizza_brew_body", true),
+    PIZZA_TEAM_CAR_BODY("pizza_team_body", true),
+    PIZZA_TOKENS_BODY("pizza_tokens_body", true),
+
+    AMBULANCE_CAR_BODY("ambulance_body", true),
+    TAXI_CAR_BODY("taxi_body", true),
+    AMAZON_CAR_BODY("amazon_body", true),
+    POST_CAR_BODY("post_body", true),
+    ANGEL_BODY("angel_body", true),
+    FIRE_BODY("fire_body", true),
+
+
     TRACTOR("tractor_body"),
     MINI_BUS_BODY("mini_bus_body"),
     DIRT_BIKE_BODY("dirt_bike_body"),
@@ -86,6 +102,11 @@ public enum SpecialModels implements ISpecialModel
      */
     @OnlyIn(Dist.CLIENT)
     private IBakedModel cachedModel;
+
+    SpecialModels(String modelName, boolean pizza)
+    {
+        this(new ResourceLocation(Reference.MOD_ID, "vehicle/pizza/" + modelName), true);
+    }
 
     /**
      * Sets the model's location

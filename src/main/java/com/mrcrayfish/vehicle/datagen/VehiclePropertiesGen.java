@@ -5,9 +5,17 @@ import com.mrcrayfish.vehicle.common.entity.PartPosition;
 import com.mrcrayfish.vehicle.entity.EngineType;
 import com.mrcrayfish.vehicle.entity.VehicleProperties;
 import com.mrcrayfish.vehicle.entity.Wheel;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.PizzaCarEntity;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.pizza.PizzaBrewCarEntity;
 import com.mrcrayfish.vehicle.init.ModEntities;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Mod;
+
+import java.util.Arrays;
+import java.util.function.Function;
 
 /**
  * Author: MrCrayfish
@@ -382,48 +390,63 @@ public class VehiclePropertiesGen extends VehiclePropertiesProvider
                 .setCanChangeWheels(true)
                 .setColored(true));
 
-        this.add(ModEntities.OFF_ROADER.get(), VehicleProperties.builder()
-                .setAxleOffset(-1.0F)
-                .setBodyPosition(PartPosition.create(1.4))
-                .setFuelPortPosition(PartPosition.create(-12.0, 8.5, -6.5, 0.0, -90, 0.0, 0.25))
-                .setKeyPortPosition(PartPosition.create(0.0, 7.0, 6.2, -67.5, 0.0, 0.0, 0.5))
-                .setDisplayPosition(PartPosition.create(0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 1.0))
-                .setHeldOffset(0.0, 3.5, 0.0)
-                .addWheel(Wheel.builder()
-                        .setSide(Wheel.Side.LEFT)
-                        .setPosition(Wheel.Position.FRONT)
-                        .setOffset(10.0, 0.0, 14.5)
-                        .setScale(1.4F)
-                        .setParticles(true))
-                .addWheel(Wheel.builder()
-                        .setSide(Wheel.Side.RIGHT)
-                        .setPosition(Wheel.Position.FRONT)
-                        .setOffset(10.0, 0.0, 14.5)
-                        .setScale(1.4F)
-                        .setParticles(true))
-                .addWheel(Wheel.builder()
-                        .setSide(Wheel.Side.LEFT)
-                        .setPosition(Wheel.Position.REAR)
-                        .setOffset(10.0, 0.0, -14.5)
-                        .setScale(1.4F)
-                        .setParticles(true))
-                .addWheel(Wheel.builder()
-                        .setSide(Wheel.Side.RIGHT)
-                        .setPosition(Wheel.Position.REAR)
-                        .setOffset(10.0, 0.0, -14.5)
-                        .setScale(1.4F)
-                        .setParticles(true))
-                .setFrontAxleOffset(14.5)
-                .setRearAxleOffset(-14.5)
-                .addSeat(Seat.of(5.0, 4.0, -3.0, true))
-                .addSeat(Seat.of(-5.0, 4.0, -3.0))
-                .addSeat(Seat.of(5.0, 11.5, -14.5))
-                .addSeat(Seat.of(-5.0, 3.5, -18.9))
-                .setEngineType(EngineType.LARGE_MOTOR)
-                .setCanChangeWheels(true)
-                .setColored(true));
+        Function<EntityType<? extends PizzaCarEntity<? extends Entity>>, VehicleProperties.Builder>
+                pizzaCarProperties = entityType -> VehicleProperties.builder()
+                        .setAxleOffset(-1.0F)
+                        .setBodyPosition(PartPosition.create(1.4))
+                        .setFuelPortPosition(PartPosition.create(-12.0, 8.5, -6.5, 0.0, -90, 0.0, 0.25))
+                        .setKeyPortPosition(PartPosition.create(0.0, 7.0, 6.2, -67.5, 0.0, 0.0, 0.5))
+                        .setDisplayPosition(PartPosition.create(0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 1.0))
+                        .setHeldOffset(0.0, 3.5, 0.0)
+                        .addWheel(Wheel.builder()
+                                .setSide(Wheel.Side.LEFT)
+                                .setPosition(Wheel.Position.FRONT)
+                                .setOffset(10.0, 0.0, 14.5)
+                                .setScale(1.4F)
+                                .setParticles(true))
+                        .addWheel(Wheel.builder()
+                                .setSide(Wheel.Side.RIGHT)
+                                .setPosition(Wheel.Position.FRONT)
+                                .setOffset(10.0, 0.0, 14.5)
+                                .setScale(1.4F)
+                                .setParticles(true))
+                        .addWheel(Wheel.builder()
+                                .setSide(Wheel.Side.LEFT)
+                                .setPosition(Wheel.Position.REAR)
+                                .setOffset(10.0, 0.0, -14.5)
+                                .setScale(1.4F)
+                                .setParticles(true))
+                        .addWheel(Wheel.builder()
+                                .setSide(Wheel.Side.RIGHT)
+                                .setPosition(Wheel.Position.REAR)
+                                .setOffset(10.0, 0.0, -14.5)
+                                .setScale(1.4F)
+                                .setParticles(true))
+                        .setFrontAxleOffset(14.5)
+                        .setRearAxleOffset(-14.5)
+                        .addSeat(Seat.of(5.0, 4.0, -3.0, true))
+                        .addSeat(Seat.of(-5.0, 4.0, -3.0))
+                        .addSeat(Seat.of(5.0, 11.5, -14.5))
+                        .addSeat(Seat.of(-5.0, 3.5, -18.9))
+                        .setEngineType(EngineType.LARGE_MOTOR)
+                        .setCanChangeWheels(true)
+                        .setColored(true);
+        Arrays.asList(
+                ModEntities.POLICE_CAR,
+                ModEntities.POLICE_TRANSPORT_CAR,
+                ModEntities.POLICE_INVESTIGATION_CAR,
+                ModEntities.AMBULANCE_CAR,
+                ModEntities.ANGEL_CAR,
+                ModEntities.TAXI_CAR,
+                ModEntities.POST_CAR,
+                ModEntities.AMAZON_CAR,
+                ModEntities.FIRE_CAR,
+                ModEntities.PIZZA_TEAM_CAR,
+                ModEntities.PIZZA_BREW_CAR,
+                ModEntities.PIZZA_TOKENS_CAR
+        ).forEach(x -> this.add(x.get(), pizzaCarProperties.apply(x.get())));
 
-        this.add(ModEntities.POLICE_CAR.get(), VehicleProperties.builder()
+        this.add(ModEntities.OFF_ROADER.get(), VehicleProperties.builder()
                 .setAxleOffset(-1.0F)
                 .setBodyPosition(PartPosition.create(1.4))
                 .setFuelPortPosition(PartPosition.create(-12.0, 8.5, -6.5, 0.0, -90, 0.0, 0.25))

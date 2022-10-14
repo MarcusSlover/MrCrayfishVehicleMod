@@ -35,6 +35,10 @@ public class Seat
         this.yawOffset = yawOffset;
     }
 
+    public void setPosition(Vector3d position) {
+        this.position = position;
+    }
+
     public Vector3d getPosition()
     {
         return position;

@@ -8,6 +8,13 @@ import com.mrcrayfish.vehicle.entity.trailer.SeederTrailerEntity;
 import com.mrcrayfish.vehicle.entity.trailer.StorageTrailerEntity;
 import com.mrcrayfish.vehicle.entity.trailer.VehicleEntityTrailer;
 import com.mrcrayfish.vehicle.entity.vehicle.*;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.pizza.PizzaBrewCarEntity;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.pizza.PizzaTeamCarEntity;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.pizza.PizzaTokensCarEntity;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.police.PoliceCarEntity;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.police.PoliceInvestigationCarEntity;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.police.PoliceTransportCarEntity;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.service.*;
 import com.mrcrayfish.vehicle.util.VehicleUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
@@ -41,10 +48,24 @@ public class ModEntities
     public static final RegistryObject<EntityType<SportsPlaneEntity>> SPORTS_PLANE = VehicleUtil.createEntityType(REGISTER, "sports_plane", SportsPlaneEntity::new, 3.0F, 1.6875F);
     public static final RegistryObject<EntityType<GolfCartEntity>> GOLF_CART = VehicleUtil.createEntityType(REGISTER, "golf_cart", GolfCartEntity::new, 2.0F, 1.0F);
     public static final RegistryObject<EntityType<OffRoaderEntity>> OFF_ROADER = VehicleUtil.createEntityType(REGISTER, "off_roader", OffRoaderEntity::new, 2.0F, 1.0F);
-    public static final RegistryObject<EntityType<PoliceCarEntity>> POLICE_CAR = VehicleUtil.createEntityType(REGISTER, "police_car", PoliceCarEntity::new, 2.0F, 1.0F);
     public static final RegistryObject<EntityType<TractorEntity>> TRACTOR = VehicleUtil.createEntityType(REGISTER, "tractor", TractorEntity::new, 1.5F, 1.5F);
     public static final RegistryObject<EntityType<MiniBusEntity>> MINI_BUS = VehicleUtil.createEntityType(REGISTER, "mini_bus", MiniBusEntity::new, 2.0F, 2.0F);
     public static final RegistryObject<EntityType<DirtBikeEntity>> DIRT_BIKE = VehicleUtil.createEntityType(REGISTER, "dirt_bike", DirtBikeEntity::new, 1.0F, 1.5F);
+
+    public static final RegistryObject<EntityType<PoliceCarEntity>> POLICE_CAR = VehicleUtil.createEntityType(REGISTER, "police_car", PoliceCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<PoliceTransportCarEntity>> POLICE_TRANSPORT_CAR = VehicleUtil.createEntityType(REGISTER, "police_transport_car", PoliceTransportCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<PoliceInvestigationCarEntity>> POLICE_INVESTIGATION_CAR = VehicleUtil.createEntityType(REGISTER, "police_investigation_car", PoliceInvestigationCarEntity::new, 2.0F, 1.0F);
+
+    public static final RegistryObject<EntityType<AmazonCarEntity>> AMAZON_CAR = VehicleUtil.createEntityType(REGISTER, "amazon_car", AmazonCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<PostCarEntity>> POST_CAR = VehicleUtil.createEntityType(REGISTER, "post_car", PostCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<TaxiCarEntity>> TAXI_CAR = VehicleUtil.createEntityType(REGISTER, "taxi_car", TaxiCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<AngelCarEntity>> ANGEL_CAR = VehicleUtil.createEntityType(REGISTER, "angel_car", AngelCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<FireCarEntity>> FIRE_CAR = VehicleUtil.createEntityType(REGISTER, "fire_car", FireCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<AmbulanceCarEntity>> AMBULANCE_CAR = VehicleUtil.createEntityType(REGISTER, "ambulance_car", AmbulanceCarEntity::new, 2.0F, 1.0F);
+
+    public static final RegistryObject<EntityType<PizzaTeamCarEntity>> PIZZA_TEAM_CAR = VehicleUtil.createEntityType(REGISTER, "pizza_team_car", PizzaTeamCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<PizzaTokensCarEntity>> PIZZA_TOKENS_CAR = VehicleUtil.createEntityType(REGISTER, "pizza_tokens_car", PizzaTokensCarEntity::new, 2.0F, 1.0F);
+    public static final RegistryObject<EntityType<PizzaBrewCarEntity>> PIZZA_BREW_CAR = VehicleUtil.createEntityType(REGISTER, "pizza_brew_car", PizzaBrewCarEntity::new, 2.0F, 1.0F);
 
     /* Trailers */
     public static final RegistryObject<EntityType<VehicleEntityTrailer>> VEHICLE_TRAILER = VehicleUtil.createEntityType(REGISTER, "vehicle_trailer", VehicleEntityTrailer::new, 1.5F, 0.75F);
