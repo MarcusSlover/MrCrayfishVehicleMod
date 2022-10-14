@@ -643,7 +643,7 @@ public class VehiclePropertiesGen extends VehiclePropertiesProvider
                 .setDisplayPosition(PartPosition.create(0.0, 0.0, -0.15, 0.0, 0.0, 0.0, 1.35))
                 .setColored(true));
 
-        this.add(new ResourceLocation("vehicle", "bath"), VehicleProperties.builder()
+        /*this.add(new ResourceLocation("vehicle", "bath"), VehicleProperties.builder()
                 .setBodyPosition(PartPosition.create(1.0))
                 .setDisplayPosition(PartPosition.create(0.0, 0.0, -0.25, 0.0, 0.0, 0.0, 1.5))
                 .setHeldOffset(4.0, 3.5, 0.0)
@@ -692,6 +692,6 @@ public class VehiclePropertiesGen extends VehiclePropertiesProvider
                 .setKeyPortPosition(PartPosition.create(-9.25, 8.0, 5.0, 0.0, 0.0, 0.0, 0.8))
                 .setDisplayPosition(PartPosition.create(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.25))
                 .addSeat(Seat.of(0.0, 0.0, 0.0, true))
-                .setEngineType(EngineType.SMALL_MOTOR));
+                .setEngineType(EngineType.SMALL_MOTOR));*/
     }
 }

@@ -179,9 +179,9 @@ public class ClientHandler
         /* Register Mod Exclusive Vehicles */
         if(ModList.get().isLoaded("cfm"))
         {
-            registerVehicleRenderer(ModEntities.SOFA.get(), SofaCarRenderer::new);
-            registerVehicleRenderer(ModEntities.BATH.get(), BathModel::new);
-            registerVehicleRenderer(ModEntities.SOFACOPTER.get(), SofaHelicopterRenderer::new);
+            //registerVehicleRenderer(ModEntities.SOFA.get(), SofaCarRenderer::new);
+            //registerVehicleRenderer(ModEntities.BATH.get(), BathModel::new);
+            //registerVehicleRenderer(ModEntities.SOFACOPTER.get(), SofaHelicopterRenderer::new);
         }
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.JACK.get(), com.mrcrayfish.vehicle.client.render.JackRenderer::new);

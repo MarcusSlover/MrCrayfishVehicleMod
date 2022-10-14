@@ -75,9 +75,9 @@ public class ModEntities
     public static final RegistryObject<EntityType<FertilizerTrailerEntity>> FERTILIZER = VehicleUtil.createEntityType(REGISTER, "fertilizer", FertilizerTrailerEntity::new, 1.5F, 1.0F);
 
     /* Special Vehicles */
-    public static final RegistryObject<EntityType<CouchEntity>> SOFA = VehicleUtil.createModDependentEntityType(REGISTER, "cfm", "couch", CouchEntity::new, 1.0F, 1.0F, true);
-    public static final RegistryObject<EntityType<BathEntity>> BATH = VehicleUtil.createModDependentEntityType(REGISTER, "cfm", "bath", BathEntity::new, 1.0F, 1.0F, false);
-    public static final RegistryObject<EntityType<SofacopterEntity>> SOFACOPTER = VehicleUtil.createModDependentEntityType(REGISTER, "cfm", "sofacopter", SofacopterEntity::new, 1.0F, 1.0F, false);
+    //public static final RegistryObject<EntityType<CouchEntity>> SOFA = VehicleUtil.createModDependentEntityType(REGISTER, "cfm", "couch", CouchEntity::new, 1.0F, 1.0F, true);
+    //public static final RegistryObject<EntityType<BathEntity>> BATH = VehicleUtil.createModDependentEntityType(REGISTER, "cfm", "bath", BathEntity::new, 1.0F, 1.0F, false);
+    //public static final RegistryObject<EntityType<SofacopterEntity>> SOFACOPTER = VehicleUtil.createModDependentEntityType(REGISTER, "cfm", "sofacopter", SofacopterEntity::new, 1.0F, 1.0F, false);
 
     /* Other */
     public static final RegistryObject<EntityType<EntityJack>> JACK = registerEntity("jack", EntityJack::new, 0.0F, 0.0F);
