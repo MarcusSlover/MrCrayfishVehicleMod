@@ -34,7 +34,7 @@ public class ModSounds
     public static final RegistryObject<SoundEvent> ENTITY_VEHICLE_DESTROYED = register("entity.vehicle.destroyed");
 
     public static final RegistryObject<SoundEvent> ENTITY_VEHICLE_HORN = register("entity.vehicle.horn");
-    public static final RegistryObject<SoundEvent> ENTITY_POLICE_HORN = register("entity.vehicle.police.horn");
+    public static final RegistryObject<SoundEvent> ENTITY_POLICE_HORN = register("entity.police.horn");
 
     public static final RegistryObject<SoundEvent> ENTITY_VEHICLE_IMPACT = register("entity.vehicle.impact");
     public static final RegistryObject<SoundEvent> ENTITY_VEHICLE_PICK_UP = register("entity.vehicle.pick_up");

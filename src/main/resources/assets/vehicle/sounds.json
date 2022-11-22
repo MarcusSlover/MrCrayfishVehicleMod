@@ -56,6 +56,9 @@
     "entity.vehicle.horn": {
         "sounds": [ {"name": "vehicle:entity/vehicle/horn"}]
     },
+    "entity.police.horn": {
+        "sounds": [ {"name": "vehicle:entity/police/horn"}]
+    },
     "entity.vehicle.impact": {
         "sounds": [ {"name": "vehicle:entity/vehicle/impact"}]
     },
