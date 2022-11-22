@@ -2,6 +2,7 @@ package com.mrcrayfish.vehicle.entity.vehicle.pizza.police;
 
 import com.mrcrayfish.vehicle.entity.LandVehicleEntity;
 import com.mrcrayfish.vehicle.entity.vehicle.pizza.PizzaCarEntity;
+import com.mrcrayfish.vehicle.init.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
@@ -19,5 +20,10 @@ public class PoliceInvestigationCarEntity extends PizzaCarEntity<PoliceInvestiga
     @Override
     public boolean isTransporter() {
         return true;
+    }
+
+    public SoundEvent getHornSound()
+    {
+        return ModSounds.ENTITY_POLICE_HORN.get();
     }
 }
