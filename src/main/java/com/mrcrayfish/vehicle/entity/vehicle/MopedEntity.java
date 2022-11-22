@@ -7,6 +7,8 @@ import com.mrcrayfish.vehicle.client.EntityRayTracer.RayTraceResultRotated;
 import com.mrcrayfish.vehicle.client.EntityRayTracer.TriangleRayTraceList;
 import com.mrcrayfish.vehicle.common.inventory.IAttachableChest;
 import com.mrcrayfish.vehicle.common.inventory.StorageInventory;
+import com.mrcrayfish.vehicle.entity.EngineTier;
+import com.mrcrayfish.vehicle.entity.IEngineTier;
 import com.mrcrayfish.vehicle.entity.MotorcycleEntity;
 import com.mrcrayfish.vehicle.init.ModSounds;
 import com.mrcrayfish.vehicle.inventory.container.StorageContainer;
@@ -46,6 +48,7 @@ import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Author: MrCrayfish
@@ -364,5 +367,30 @@ public class MopedEntity extends MotorcycleEntity implements IAttachableChest
     public float getPrevOpenProgress()
     {
         return this.prevOpenProgress;
+    }
+
+    @Override
+    public float getActualMaxSpeed()
+    {
+        float maxSpeed = this.entityData.get(MAX_SPEED);
+        Optional<IEngineTier> engineTier = this.getEngineTier();
+        if(engineTier.isPresent()) {
+
+            IEngineTier iEngineTier = engineTier.get();
+            if (iEngineTier instanceof EngineTier) {
+                EngineTier tier = (EngineTier) iEngineTier;
+                if (tier == EngineTier.DIAMOND || tier == EngineTier.NETHERITE) {
+                    return 10F;
+                }
+                if (tier == EngineTier.GOLD) {
+                    return 8F;
+                }
+                if (tier == EngineTier.IRON) {
+                    return 6F;
+                }
+            }
+            maxSpeed += engineTier.get().getAdditionalMaxSpeed();
+        }
+        return maxSpeed;
     }
 }
