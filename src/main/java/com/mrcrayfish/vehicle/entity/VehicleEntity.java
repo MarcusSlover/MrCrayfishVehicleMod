@@ -83,6 +83,9 @@ public abstract class VehicleEntity extends Entity implements IEntityAdditionalS
         super(entityType, worldIn);
         this.seatTracker = new SeatTracker(this);
     }
+    public boolean isTransporter() {
+        return false;
+    }
 
     @Override
     protected void defineSynchedData()
@@ -755,8 +758,12 @@ public abstract class VehicleEntity extends Entity implements IEntityAdditionalS
                 VehicleProperties properties = this.getProperties();
                 if(seatIndex >= 0 && seatIndex < properties.getSeats().size())
                 {
+
                     Seat seat = properties.getSeats().get(seatIndex);
-                    Vector3d seatVec = seat.getPosition().add(0, properties.getAxleOffset() + properties.getWheelOffset(), 0).scale(properties.getBodyPosition().getScale()).yRot(-this.getModifiedRotationYaw() * 0.017453292F - ((float) Math.PI / 2F));
+                    Vector3d seatVec = seat.getPosition().add(0,  properties.getWheelOffset(), 0).scale(properties.getBodyPosition().getScale()).yRot(-this.getModifiedRotationYaw() * 0.017453292F - ((float) Math.PI / 2F));
+                    if (!this.isTransporter()) {
+                        seatVec = seatVec.add(0, properties.getAxleOffset(), 0);
+                    }
                     passenger.setPos(this.getX() + seatVec.x, this.getY() + seatVec.y, this.getZ() + seatVec.z);
                     this.applyYawToEntity(passenger);
                 }

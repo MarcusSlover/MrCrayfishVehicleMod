@@ -29,7 +29,7 @@ public class SofaCarRenderer extends AbstractLandVehicleRenderer<CouchEntity>
         matrixStack.pushPose();
         matrixStack.translate(0.0, 0.0625, 0.0);
         //matrixStack.rotate(Vector3f.YP.rotationDegrees(90F));
-        this.renderDamagedPart(vehicle, SpecialModels.RAINBOW_SOFA.getModel(), matrixStack, renderTypeBuffer, light);
+        //this.renderDamagedPart(vehicle, SpecialModels.RAINBOW_SOFA.getModel(), matrixStack, renderTypeBuffer, light);
         matrixStack.popPose();
     }
 
@@ -52,9 +52,9 @@ public class SofaCarRenderer extends AbstractLandVehicleRenderer<CouchEntity>
     {
         return (tracer, transforms, parts) ->
         {
-            EntityRayTracer.createTransformListForPart(SpecialModels.RAINBOW_SOFA, parts, transforms,
+           /* EntityRayTracer.createTransformListForPart(SpecialModels.RAINBOW_SOFA, parts, transforms,
                     EntityRayTracer.MatrixTransformation.createRotation(Axis.POSITIVE_Y, 90F),
-                    EntityRayTracer.MatrixTransformation.createTranslation(0.0F, 0.0625F, 0.0F));
+                    EntityRayTracer.MatrixTransformation.createTranslation(0.0F, 0.0625F, 0.0F));*/
         };
     }
 }

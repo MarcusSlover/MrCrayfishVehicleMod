@@ -32,7 +32,7 @@ public class SofaHelicopterRenderer extends AbstractHelicopterRenderer<Sofacopte
     protected void render(@Nullable SofacopterEntity vehicle, MatrixStack matrixStack, IRenderTypeBuffer renderTypeBuffer, float partialTicks, int light)
     {
         matrixStack.pushPose();
-        this.renderDamagedPart(vehicle, SpecialModels.RED_SOFA.getModel(), matrixStack, renderTypeBuffer, light);
+        //this.renderDamagedPart(vehicle, SpecialModels.RED_SOFA.getModel(), matrixStack, renderTypeBuffer, light);
         matrixStack.popPose();
 
         matrixStack.pushPose();
@@ -99,12 +99,12 @@ public class SofaHelicopterRenderer extends AbstractHelicopterRenderer<Sofacopte
     {
         return (tracer, transforms, parts) ->
         {
-            EntityRayTracer.createTransformListForPart(SpecialModels.RED_SOFA, parts, transforms,
+            /*EntityRayTracer.createTransformListForPart(SpecialModels.RED_SOFA, parts, transforms,
                     EntityRayTracer.MatrixTransformation.createRotation(Axis.POSITIVE_Y, 90F));
             EntityRayTracer.createTransformListForPart(SpecialModels.SOFA_HELICOPTER_ARM, parts, transforms,
                     EntityRayTracer.MatrixTransformation.createTranslation(0.0F, 8 * 0.0625F, 0.0F));
             EntityRayTracer.createFuelPartTransforms(ModEntities.SOFACOPTER.get(), SpecialModels.FUEL_DOOR_CLOSED, parts, transforms);
-            EntityRayTracer.createKeyPortTransforms(ModEntities.SOFACOPTER.get(), parts, transforms);
+            EntityRayTracer.createKeyPortTransforms(ModEntities.SOFACOPTER.get(), parts, transforms);*/
         };
     }
 }

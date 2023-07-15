@@ -19,6 +19,13 @@ import com.mrcrayfish.vehicle.client.render.tileentity.GasPumpRenderer;
 import com.mrcrayfish.vehicle.client.render.tileentity.GasPumpTankRenderer;
 import com.mrcrayfish.vehicle.client.render.tileentity.VehicleCrateRenderer;
 import com.mrcrayfish.vehicle.client.render.vehicle.*;
+import com.mrcrayfish.vehicle.client.render.vehicle.pizza.pizza.PizzaBrewCarRenderer;
+import com.mrcrayfish.vehicle.client.render.vehicle.pizza.pizza.PizzaTeamCarRenderer;
+import com.mrcrayfish.vehicle.client.render.vehicle.pizza.pizza.PizzaTokensCarRenderer;
+import com.mrcrayfish.vehicle.client.render.vehicle.pizza.police.PoliceCarRenderer;
+import com.mrcrayfish.vehicle.client.render.vehicle.pizza.police.PoliceInvestigationCarRenderer;
+import com.mrcrayfish.vehicle.client.render.vehicle.pizza.police.PoliceTransportCarRenderer;
+import com.mrcrayfish.vehicle.client.render.vehicle.pizza.service.*;
 import com.mrcrayfish.vehicle.client.screen.EditVehicleScreen;
 import com.mrcrayfish.vehicle.client.screen.FluidExtractorScreen;
 import com.mrcrayfish.vehicle.client.screen.FluidMixerScreen;
@@ -26,6 +33,7 @@ import com.mrcrayfish.vehicle.client.screen.StorageScreen;
 import com.mrcrayfish.vehicle.client.screen.WorkstationScreen;
 import com.mrcrayfish.vehicle.entity.VehicleEntity;
 import com.mrcrayfish.vehicle.entity.VehicleProperties;
+import com.mrcrayfish.vehicle.entity.vehicle.pizza.police.PoliceTransportCarEntity;
 import com.mrcrayfish.vehicle.init.ModBlocks;
 import com.mrcrayfish.vehicle.init.ModContainers;
 import com.mrcrayfish.vehicle.init.ModEntities;
@@ -111,7 +119,7 @@ public class ClientHandler
 
     private static void setupRenderLayers()
     {
-        RenderTypeLookup.setRenderLayer(ModBlocks.WORKSTATION.get(), RenderType.cutout());
+        //RenderTypeLookup.setRenderLayer(ModBlocks.WORKSTATION.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.FLUID_EXTRACTOR.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.GAS_PUMP.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModFluids.FUELIUM.get(), RenderType.translucent());
@@ -147,6 +155,20 @@ public class ClientHandler
         registerVehicleRenderer(ModEntities.MINI_BUS.get(), MiniBusRenderer::new);
         registerVehicleRenderer(ModEntities.DIRT_BIKE.get(), DirtBikeRenderer::new);
 
+        /* Pizzaland */
+        registerVehicleRenderer(ModEntities.POLICE_CAR.get(), PoliceCarRenderer::new);
+        registerVehicleRenderer(ModEntities.POLICE_INVESTIGATION_CAR.get(), PoliceInvestigationCarRenderer::new);
+        registerVehicleRenderer(ModEntities.POLICE_TRANSPORT_CAR.get(), PoliceTransportCarRenderer::new);
+        registerVehicleRenderer(ModEntities.AMAZON_CAR.get(), AmazonCarRenderer::new);
+        registerVehicleRenderer(ModEntities.AMBULANCE_CAR.get(), AmbulanceCarRenderer::new);
+        registerVehicleRenderer(ModEntities.ANGEL_CAR.get(), AngelCarRenderer::new);
+        registerVehicleRenderer(ModEntities.FIRE_CAR.get(), FireCarRenderer::new);
+        registerVehicleRenderer(ModEntities.POST_CAR.get(), PostCarRenderer::new);
+        registerVehicleRenderer(ModEntities.TAXI_CAR.get(), TaxiCarRenderer::new);
+        registerVehicleRenderer(ModEntities.PIZZA_BREW_CAR.get(), PizzaBrewCarRenderer::new);
+        registerVehicleRenderer(ModEntities.PIZZA_TOKENS_CAR.get(), PizzaTokensCarRenderer::new);
+        registerVehicleRenderer(ModEntities.PIZZA_TEAM_CAR.get(), PizzaTeamCarRenderer::new);
+
         /* Register Trailers */
         registerVehicleRenderer(ModEntities.VEHICLE_TRAILER.get(), VehicleTrailerRenderer::new);
         registerVehicleRenderer(ModEntities.STORAGE_TRAILER.get(), StorageTrailerRenderer::new);
@@ -157,9 +179,9 @@ public class ClientHandler
         /* Register Mod Exclusive Vehicles */
         if(ModList.get().isLoaded("cfm"))
         {
-            registerVehicleRenderer(ModEntities.SOFA.get(), SofaCarRenderer::new);
-            registerVehicleRenderer(ModEntities.BATH.get(), BathModel::new);
-            registerVehicleRenderer(ModEntities.SOFACOPTER.get(), SofaHelicopterRenderer::new);
+            //registerVehicleRenderer(ModEntities.SOFA.get(), SofaCarRenderer::new);
+            //registerVehicleRenderer(ModEntities.BATH.get(), BathModel::new);
+            //registerVehicleRenderer(ModEntities.SOFACOPTER.get(), SofaHelicopterRenderer::new);
         }
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.JACK.get(), com.mrcrayfish.vehicle.client.render.JackRenderer::new);

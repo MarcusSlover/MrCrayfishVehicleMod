@@ -26,7 +26,7 @@ public class WorkstationTileEntity extends TileEntitySynced implements IStorageB
 
     public WorkstationTileEntity()
     {
-        super(ModTileEntities.WORKSTATION.get());
+        super(null /*ModTileEntities.WORKSTATION.get()*/);
     }
 
     @Override

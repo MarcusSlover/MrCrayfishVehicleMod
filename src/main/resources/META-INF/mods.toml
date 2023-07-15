@@ -1,17 +1,15 @@
 modLoader="javafml"
 loaderVersion="[36,)"
 license="GNU General Public License 3.0"
-issueTrackerURL="https://github.com/MrCrayfish/MrCrayfishVehicleMod/issues"
 
 [[mods]]
 modId="vehicle"
 version="0.45.2"
-displayName="MrCrayfish's Vehicle Mod"
-updateJSONURL="https://mrcrayfish.com/modupdatejson?id=vehicle"
+displayName="Pizza Vehicle Mod (Modified MrCrayfish's Vehicle Mod)"
 displayURL="https://mrcrayfish.com/mods?id=vehicle"
 logoFile="vehicle_mod.png"
 credits="Phylogeny https://github.com/Phylogeny"
-authors="MrCrayfish"
+authors="MrCrayfish (modified by MarcusSlover)"
 description="A mod that adds vehicles into Minecraft!"
 
 [[dependencies.vehicle]]

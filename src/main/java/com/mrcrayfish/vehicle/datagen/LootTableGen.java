@@ -56,8 +56,7 @@ public class LootTableGen extends ForgeLootTableProvider
             this.dropSelf(ModBlocks.FLUID_PUMP.get());
             this.dropSelf(ModBlocks.GAS_PUMP.get());
             this.dropSelf(ModBlocks.TRAFFIC_CONE.get());
-            this.dropSelf(ModBlocks.WORKSTATION.get());
-            this.dropSelf(ModBlocks.WORKSTATION.get());
+            //this.dropSelf(ModBlocks.WORKSTATION.get());
             this.dropSelf(ModBlocks.JACK.get());
             this.dropSelf(ModBlocks.JACK_HEAD.get());
             this.add(ModBlocks.VEHICLE_CRATE.get(), BlockProvider::createVehicleCrateDrop);
